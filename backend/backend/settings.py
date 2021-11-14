@@ -44,6 +44,7 @@ REST_FRAMEWORK = {
 # Application definition
 
 INSTALLED_APPS = [
+    "rest_framework_swagger",
     "corsheaders",
     "rest_framework",
     "profiles.apps.ProfilesConfig",
