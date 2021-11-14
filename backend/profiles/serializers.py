@@ -18,7 +18,11 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ["username", "email", "password", "profile"]
         extra_kwargs = {
-            "email": {"validators": [UniqueValidator(queryset=User.objects.all())]},
+            "email": {
+                "validators": [UniqueValidator(queryset=User.objects.all())],
+                "required": True,
+                "allow_null": False,
+            },
             "password": {"write_only": True},
         }
 
@@ -30,3 +34,6 @@ class UserSerializer(serializers.ModelSerializer):
         user.save()
         Profile.objects.get_or_create(**profile_data, user=user)
         return user
+
+    def __str__(self):
+        return self.username

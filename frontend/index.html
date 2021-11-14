@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .post {
+            background-color: bisque;
+            width: 90%;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="post" v-for="post in posts">
+            <h3>{{post.title}} {{post.score}}</h3>{{post.url}} - {{post.author}}
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                posts: [],
+            },
+            methods: {
+                getPosts: function () {
+                    axios.get('http://localhost:8000')
+                        .then((response) => {
+                            this.posts = response.data.results
+                            this.message = "haha"
+                            console.log(response.data.results);
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                        });
+                }
+            },
+            beforeMount() {
+                this.getPosts()
+            },
+        })
+    </script>
+</body>
+
+</html>
