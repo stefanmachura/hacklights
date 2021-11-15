@@ -12,13 +12,15 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     path("users/", include("profiles.urls")),
     path("votes/", include("votes.urls")),
-    path("posts/", include("posts.urls")),
+    path("", include("posts.urls")),
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("admin/", admin.site.urls),
     path(
         "openapi/",
-        get_schema_view(title="Hacklights", description="API documentation", public=True),
+        get_schema_view(
+            title="Hacklights", description="API documentation", public=True
+        ),
         name="openapi-schema",
     ),
     path(
