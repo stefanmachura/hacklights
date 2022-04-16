@@ -19,7 +19,9 @@ click==8.0.3
     #   black
     #   pip-tools
 coreapi==2.3.3
-    # via drf-yasg
+    # via
+    #   djangorestframework-stubs
+    #   drf-yasg
 coreschema==0.0.4
     # via
     #   coreapi
@@ -28,17 +30,27 @@ django==3.2.9
     # via
     #   -r requirements.in
     #   django-cors-headers
+    #   django-stubs
+    #   django-stubs-ext
     #   djangorestframework
     #   djangorestframework-simplejwt
     #   drf-yasg
 django-cors-headers==3.11.0
     # via -r requirements.in
+django-stubs==1.10.1
+    # via
+    #   -r requirements.in
+    #   djangorestframework-stubs
+django-stubs-ext==0.4.0
+    # via django-stubs
 djangorestframework==3.12.4
     # via
     #   -r requirements.in
     #   djangorestframework-simplejwt
     #   drf-yasg
 djangorestframework-simplejwt==5.1.0
+    # via -r requirements.in
+djangorestframework-stubs==1.5.0
     # via -r requirements.in
 drf-yasg==1.20.0
     # via -r requirements.in
@@ -60,8 +72,11 @@ markupsafe==2.1.1
     # via jinja2
 mccabe==0.6.1
     # via flake8
-mypy==0.910
-    # via -r requirements.in
+mypy==0.942
+    # via
+    #   -r requirements.in
+    #   django-stubs
+    #   djangorestframework-stubs
 mypy-extensions==0.4.3
     # via
     #   black
@@ -103,7 +118,9 @@ pytz==2021.3
 regex==2021.11.10
     # via black
 requests==2.27.1
-    # via coreapi
+    # via
+    #   coreapi
+    #   djangorestframework-stubs
 ruamel-yaml==0.17.21
     # via drf-yasg
 ruamel-yaml-clib==0.2.6
@@ -113,16 +130,31 @@ six==1.16.0
 sqlparse==0.4.2
     # via django
 toml==0.10.2
-    # via
-    #   mypy
-    #   pytest
+    # via pytest
 tomli==1.2.2
     # via
     #   black
+    #   django-stubs
+    #   mypy
     #   pep517
+types-markdown==3.3.13
+    # via djangorestframework-stubs
+types-pytz==2021.3.6
+    # via django-stubs
+types-pyyaml==6.0.6
+    # via
+    #   django-stubs
+    #   djangorestframework-stubs
+types-requests==2.27.19
+    # via djangorestframework-stubs
+types-urllib3==1.26.13
+    # via types-requests
 typing-extensions==3.10.0.2
     # via
     #   black
+    #   django-stubs
+    #   django-stubs-ext
+    #   djangorestframework-stubs
     #   mypy
 uritemplate==4.1.1
     # via

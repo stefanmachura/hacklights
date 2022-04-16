@@ -1,7 +1,9 @@
 black
 django
+django-stubs
 django-cors-headers
 djangorestframework
+djangorestframework-stubs
 djangorestframework-simplejwt
 drf-yasg
 flake8
