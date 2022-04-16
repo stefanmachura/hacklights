@@ -1,8 +1,12 @@
-django
-djangorestframework
-pytest
-flake8
 black
+django
+django-cors-headers
+djangorestframework
+djangorestframework-simplejwt
+drf-yasg
+flake8
+freezegun
 mypy
+pytest-django
 pip-tools
 psycopg2-binary
