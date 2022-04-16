@@ -1,0 +1,8 @@
+django
+djangorestframework
+pytest
+flake8
+black
+mypy
+pip-tools
+psycopg2-binary
