@@ -8,6 +8,7 @@ djangorestframework-simplejwt
 drf-yasg
 flake8
 freezegun
+isort
 mypy
 pytest-django
 pip-tools

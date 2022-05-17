@@ -1,9 +1,10 @@
-from posts.models import Post
-from posts.paginations import PostListPagination
-from posts.serializers import PostListSerializer, PostCreateSerializer
 from rest_framework import filters, generics
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
+
+from posts.models import Post
+from posts.paginations import PostListPagination
+from posts.serializers import PostCreateSerializer, PostListSerializer
 
 
 class PostListView(generics.ListAPIView):
@@ -18,3 +19,6 @@ class PostCreateView(generics.CreateAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
     serializer_class = PostCreateSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)

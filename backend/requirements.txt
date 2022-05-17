@@ -64,6 +64,8 @@ inflection==0.5.1
     # via drf-yasg
 iniconfig==1.1.1
     # via pytest
+isort==5.10.1
+    # via -r requirements.in
 itypes==1.2.0
     # via coreapi
 jinja2==3.1.1

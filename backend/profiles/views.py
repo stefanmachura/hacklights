@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
-from profiles.serializers import UserSerializer
 from rest_framework import generics
+
+from profiles.serializers import UserSerializer
 
 
 class UserListView(generics.ListCreateAPIView):

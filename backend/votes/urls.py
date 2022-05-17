@@ -1,6 +1,6 @@
 from django.urls import path
 
-from votes.views import PostVoteView, PostUnvoteView
+from votes.views import PostUnvoteView, PostVoteView
 
 urlpatterns = [
     path("vote/<int:pk>", PostVoteView.as_view()),

@@ -1,10 +1,8 @@
+import pytest
 from freezegun import freeze_time
 
-import pytest
-
-from posts.serializers import PostListSerializer, PostCreateSerializer
-
 from posts.models import Post
+from posts.serializers import PostCreateSerializer, PostListSerializer
 
 
 @pytest.mark.django_db
