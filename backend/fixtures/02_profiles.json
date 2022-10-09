@@ -1,0 +1,24 @@
+[
+  {
+    "model": "profiles.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "bio": "I'm John from Johnsville",
+      "location": "Johnsville",
+      "score": 0,
+      "birthday": "1984-10-22"
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "bio": "I'm Jane and I like baking",
+      "location": "Chicao",
+      "score": 0,
+      "birthday": "1985-02-10"
+    }
+  }
+]

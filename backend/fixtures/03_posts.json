@@ -1,0 +1,24 @@
+[
+  {
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+      "title": "My first post",
+      "url": "https://google.com",
+      "score": 0,
+      "author": 1,
+      "pub_date": "2022-10-09T19:59:10.962Z"
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+      "title": "My second post",
+      "url": "https://ebay.com",
+      "score": 0,
+      "author": 1,
+      "pub_date": "2022-10-09T19:59:33.921Z"
+    }
+  }
+]
